@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrix Operations</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <form onsubmit="calculate(); return false;">
+            <div class="matrix-input">
+                <div class="matrix1">
+                    <h2>Matrix 01</h2>
+                    <label for="indexm1-00">Index 00</label>
+                    <input type="number" name="matrix1[]" value="" required id="indexm1-00"
+                        placeholder="Enter a number">
+                    <br><br>
+                    <label for="indexm1-01">Index 01</label>
+                    <input type="number" name="matrix1[]" value="" required id="indexm1-01"
+                        placeholder="Enter a number">
+                    <br><br>
+                    <label for="indexm1-02">Index 02</label>
+                    <input type="number" name="matrix1[]" value="" required id="indexm1-02"
+                        placeholder="Enter a number">
+                    <br><br>
+                    <label for="indexm1-10">Index 10</label>
+                    <input type="number" name="matrix1[]" value="" required id="indexm1-10"
+                        placeholder="Enter a number">
+                    <br><br>
+                    <label for="indexm1-11">Index 11</label>
+                    <input type="number" name="matrix1[]" value="" required id="indexm1-11"
+                        placeholder="Enter a number">
+                    <br><br>
+                    <label for="indexm1-12">Index 12</label>
+                    <input type="number" name="matrix1[]" value="" required id="indexm1-12"
+                        placeholder="Enter a number">
+                    <br><br>
+                    <label for="indexm1-20">Index 20</label>
+                    <input type="number" name="matrix1[]" value="" required id="indexm1-20"
+                        placeholder="Enter a number">
+                    <br><br>
+                    <label for="indexm1-21">Index 21</label>
+                    <input type="number" name="matrix1[]" value="" required id="indexm1-21"
+                        placeholder="Enter a number">
+                    <br><br>
+                    <label for="indexm21">Index 22</label>
+                    <input type="number" name="matrix1[]" value="" required id="indexm1-21"
+                        placeholder="Enter a number">
+                    <br><br>
+                </div>
+
+                <div class="matrix2">
+        <h2>Matrix 02</h2>
+            <label for="indexm2-00">Index 00</label>
+            <input type="number"  name="matrix2[]" value="" required id="indexm2-00" placeholder="Enter a number">
+            <br><br>
+            <label for="indexm2-01">Index 01</label>
+            <input type="number"  name="matrix2[]" value="" required id="indexm2-01" placeholder="Enter a number">
+            <br><br>
+            <label for="indexm2-02">Index 02</label>
+            <input type="number"  name="matrix2[]" value="" required id="indexm2-02" placeholder="Enter a number">
+            <br><br>
+            <label for="indexm2-10">Index 10</label>
+            <input type="number"  name="matrix2[]" value="" required id="indexm2-10" placeholder="Enter a number">
+            <br><br>
+            <label for="indexm2-11">Index 11</label>
+            <input type="number"  name="matrix2[]" value="" required id="indexm2-11" placeholder="Enter a number">
+            <br><br>
+            <label for="indexm2-12">Index 12</label>
+            <input type="number" name="matrix2[]" value="" required id="indexm2-12" placeholder="Enter a number">
+            <br><br>
+            <label for="indexm2-20">Index 20</label>
+            <input type="number"  name="matrix2[]" value="" required id="indexm2-20" placeholder="Enter a number">
+            <br><br>
+            <label for="indexm2-21">Index 21</label>
+            <input type="number"  name="matrix2[]" value="" required id="indexm2-21" placeholder="Enter a number">
+            <br><br>
+            <label for="indexm2-21">Index 22</label>
+            <input type="number"  name="matrix2[]" value="" required id="indexm2-21" placeholder="Enter a number">
+            <br><br>
+        </div>
+
+            </div>
+            <button type="submit">Add</button>
+            <!-- <button type="submit">Subtract</button> -->
+
+        </form>
+        <h2>Result</h2>
+        <p id="mat-result"></p>
+
+
+    </div>
+
+    <script>
+        function calculate() {
+
+            // let input1 = document.getElementsByName('matrix1[]');
+            let matrix1 =[];
+            let matrix2 =[];
+            let result = [];
+
+            let m100 =document.querySelector("#indexm1-00").value;
+            let m101 =document.querySelector("#indexm1-01").value;
+            let m102 =document.querySelector("#indexm1-02").value;
+            let m110 =document.querySelector("#indexm1-10").value;
+            let m111 =document.querySelector("#indexm1-11").value;
+            let m112 =document.querySelector("#indexm1-12").value;
+            let m120 =document.querySelector("#indexm1-20").value;
+            let m121 =document.querySelector("#indexm1-21").value;
+            let m122 =document.querySelector("#indexm1-22").value;
+
+            matrix1 =[[m100,m101,m102],[m110,m111,m112],[m120,m121,m122]];
+
+            m200 =document.querySelector("#indexm2-00").value;
+            m201 =document.querySelector("#indexm2-01").value;
+            m202 =document.querySelector("#indexm2-02").value;
+            m210 =document.querySelector("#indexm2-10").value;
+            m211 =document.querySelector("#indexm2-11").value;
+            m212 =document.querySelector("#indexm2-12").value;
+            m220 =document.querySelector("#indexm2-20").value;
+            m221 =document.querySelector("#indexm2-21").value;
+            m222 =document.querySelector("#indexm2-22").value;
+
+            matrix2 =[[m200,m201,m202],[m210,m211,m212],[m220,m221,m222]];
+            for (let i = 0; i < matrix1.length; i++){
+                result.push(matrix1[i] + matrix2[i]);
+                }
+            document.querySelector("#mat-result").innerHTML = result;
+
+            console.log(matrix1[0][1]);
+            console.log(matrix2[0][0]);
+            console.log(m122);
+
+        }    
+
+
+    </script>
+
+</body> -->
+
+</html> -->
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en" dir="ltr">
+ 
+<head>
+    <meta charset="utf-8">
+    <title>
+        How to get values from html input
+        array using JavaScript ?
+    </title>
+</head>
+ 
+<body style="text-align: center;">
+     
+    <h1 style="color: green;">
+        GeeksforGeeks
+    </h1>
+ 
+    <h3 id="po">Input Array Elements</h3>
+    <form class="" action="index.html" method="post">
+        <input type="text" name="array[]" value="" /><br>
+        <input type="text" name="array[]" value="" /><br>
+        <input type="text" name="array[]" value="" /><br>
+        <input type="text" name="array[]" value="" /><br>
+        <input type="text" name="array[]" value="" /><br>
+        <button type="button" name="button" onclick="Geeks()">
+            Submit
+        </button>
+    </form>
+    <br>
+ 
+    <p id="par"></p>
+ 
+    <script type="text/javascript">
+        var k = "The respective values are :";
+        function Geeks() {
+            var input = document.getElementsByName('array[]');
+ 
+            for (var i = 0; i < input.length; i++) {
+                var a = input[i];
+                k = k + "array[" + i + "].value= "
+                                   + a.value + " ";
+            }
+ 
+            document.getElementById("par").innerHTML = k;
+            document.getElementById("po").innerHTML = "Output";
+
+            console.log(input);
+        }
+        
+    </script>
+</body>
+ 
+</html> -->

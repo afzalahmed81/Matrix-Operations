@@ -1,0 +1,33 @@
+body {
+    background-color: ivory;
+}
+.container {
+    border: 2px solid gray;
+    border-radius: 10px;
+    background-color: silver;
+    width: 1000px;
+    height: 600px;
+    margin: auto;
+}
+.matrix-input {
+    display: flex;
+    gap: 1rem;
+
+}
+
+
+h2 {
+    text-align: center;
+}
+button {
+    width: 10%;
+    height: 30px;
+    margin-left: 110px;
+    margin-top: 30px;
+    border: 2px solid brown;
+    border-radius: 5px;
+    background-color: cadetblue;
+}
+.matrix1 ,.matrix2 {
+    margin-left: 10px ;
+}
